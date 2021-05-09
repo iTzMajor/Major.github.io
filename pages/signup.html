@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Major's site</title>
+    <link rel="stylesheet" type="text/css" href="../pages/Pcss/signup.css">
+    <script type="text/javascript">
+        function checkform(){
+            checkUserName();
+        }
+        function checkUserName(){
+            var OnlyLetters = true;
+            var Username = document.getElementById("Username").value;
+            if (Username.length == 0)
+                alert("Username not Valid")
+            else {
+                for (var i = 0; i < Username.length; i++){
+                    if (Username[i] >= '0' && Username[i] <= '9')
+                    OnlyLetters = false;
+                    //בודק האם יש ספרה בשם
+                }
+                if (OnlyLetters == true)
+                    alert("Welcome in " + Username);
+                else
+                    alert("Username can have only Letters x3");
+            }
+                
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <a href="https://linktr.ee/itzmajor" target="_blank">
+                    <img src="../logo1.png">
+                </a>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="platforms.html">Platforms</a></li>
+                <li><a href="bio.html">Biography</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <!-- Should add Borders and transition in CSS -->
+            </ul>
+        </div>
+        <div class="LoginP">
+        <div class="form">
+            <form class="Registr">
+             <label>Enter your Name: </label>
+             <input id="Username" type="text" placeholder="Username"/>
+             <label>Enter your Email: </label>
+             <input type="text" placeholder="Email"/>
+             <label>Enter your Password: </label>
+             <input type="text" placeholder="Password"/>
+             <label>Enter your Birthdate: </label>
+             <input type="date"/>
+            </form>
+        </div>
+        </div>
+    </header>
+    <div class="button">
+    <a href="../index.html" class="btn" target="_blank">Finish & Login</a>
+    </div>
+</body>
+</html>
